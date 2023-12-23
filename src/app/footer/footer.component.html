@@ -1,20 +1,33 @@
 <footer
   class="fixed bottom-0 left-0 z-20 w-full p-4 bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600">
   <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/"
-      class="hover:underline">Flowbite™</a>. All Rights Reserved.
+      class="hover:underline">{{'site-name' | translate}}™</a>. All Rights Reserved.
   </span>
-  <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+  <ul
+    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
     <li>
-      <a href="#" class="hover:underline me-4 md:me-6">About</a>
+      <a aria-current="page"
+         class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+         routerLink="/home">{{ 'home' | translate }}</a>
     </li>
     <li>
-      <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+      <a
+        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+        routerLink="/about">{{ 'about' | translate }}</a>
     </li>
     <li>
-      <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+      <a
+        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+        routerLink="/contact">{{ 'contact' | translate }}</a>
     </li>
     <li>
-      <a href="#" class="hover:underline">Contact</a>
+      <a
+        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+        routerLink="/monitoring">{{ 'monitoring' | translate }}</a>
+    </li>
+    <li>
+      <a class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+         routerLink="/unitList">{{ 'unitList' | translate }}</a>
     </li>
   </ul>
 </footer>

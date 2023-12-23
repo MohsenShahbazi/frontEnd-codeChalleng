@@ -1,3 +1,9 @@
 {
-  "HELLO": "hello"
+  "hello": "hello",
+  "site-name": "Front Code challenge",
+  "home": "Home",
+  "about": "About",
+  "contact": "Contact",
+  "monitoring": "Monitoring",
+  "unitList": "Unit List"
 }
