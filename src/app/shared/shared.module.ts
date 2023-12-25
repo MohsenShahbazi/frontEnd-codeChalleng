@@ -1,9 +1,11 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {HttpClient} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClient} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {NgxMapboxGLModule} from 'ngx-mapbox-gl';
+import {AuthInterceptor} from "../httpconfig.interceptor";
+import {AuthGuard} from "../auth-guard.service";
 
 
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader | any {
@@ -22,6 +24,11 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader | a
       }
     }),
     NgxMapboxGLModule
+  ],
+  providers: [
+    AuthGuard,
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   exports: [
     TranslateModule,
